@@ -1,0 +1,6 @@
+<Project DefaultTargets="Restore">
+  <Import Project="$(MSBuildThisFileDirectory)Packager.SharedFiles.items" />
+  <Target Name="Restore">
+    <Copy SourceFiles="">
+  </Target>
+</Project>
