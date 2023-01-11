@@ -16,7 +16,20 @@
                     RestorePath="./%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
                     Folder="./" IsRestorable="false" />
     </ItemDefinitionGroup>
-   <ItemGroup>
+   <ItemGroup Condition="'$(MSBuildProjectName)' == 'JwcRepoSdk'">
+        <Content Include="$(MSBuildThisFileDirectory)../.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" />
+        <Content Include="$(MSBuildThisFileDirectory)../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
+        <Content Include="$(MSBuildThisFileDirectory)../.scripts/**/*" IsRestorable="true" Folder=".scripts/" />
+        <Content Include="$(MSBuildThisFileDirectory)../Directory.Build.props" />
+        <Content Include="$(MSBuildThisFileDirectory)../Directory.Build.targets" />
+        <Content Include="$(MSBuildThisFileDirectory)../NuGet.config" />
+        <Content Include="$(MSBuildThisFileDirectory)../LICENSE.md" />
+        <Content Include="$(MSBuildThisFileDirectory)../global.json" />
+        <Content Update="@(Content)" 
+                PackagePath="ContentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
+                RestorePath="$(MSBuildProjectDirectory)/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
+    </ItemGroup>
+   <ItemGroup Condition="'$(MSBuildProjectName)' != 'JwcRepoSdk'">
         <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" />
         <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
         <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.scripts/**/*" IsRestorable="true" Folder=".scripts/" />
@@ -24,6 +37,7 @@
         <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/Directory.Build.targets" />
         <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/NuGet.config" />
         <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/LICENSE.md" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/global.json" />
         <Content Update="@(Content)" 
                 PackagePath="ContentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
                 RestorePath="$(MSBuildProjectDirectory)/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
