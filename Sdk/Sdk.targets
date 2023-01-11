@@ -1,0 +1,16 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)Packager.SharedFiles.items" />
+  <Target Name="Build">
+    <Message Text="Building!" Importance="High" />
+  </Target>
+  <Target Name="Restore">
+    <Message Text="Restoring!" Importance="High" />
+    <Copy 
+          SourceFiles="@(Content)"
+          DestinationFiles="@(Content->'%(RestorePath)')" />
+  </Target>
+  <Target Name="Clean">
+    <Message Text="Cleaning!" Importance="High" />
+    <Delete Files="@(Content->'%(RestorePath)')" />
+  </Target>
+</Project>

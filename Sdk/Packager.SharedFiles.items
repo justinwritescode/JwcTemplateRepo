@@ -1,0 +1,31 @@
+<!--
+ Packager.SharedFiles.items
+ 
+   Created: 2022-10-24-10:28:32
+   Modified: 2022-10-29-02:58:25
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+    <ItemDefinitionGroup>
+        <Content PackagePath="ContentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)"
+                    RestorePath="./%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
+                    Folder="./" IsRestorable="false" />
+    </ItemDefinitionGroup>
+   <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.scripts/**/*" IsRestorable="true" Folder=".scripts/" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/Directory.Build.props" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/Directory.Build.targets" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/NuGet.config" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/LICENSE.md" />
+        <Content Update="@(Content)" 
+                PackagePath="ContentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
+                RestorePath="$(MSBuildProjectDirectory)/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
+    </ItemGroup>
+</Project>
