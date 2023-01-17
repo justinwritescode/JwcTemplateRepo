@@ -3,14 +3,14 @@
   <Target Name="Build">
     <Message Text="Building!" Importance="High" />
   </Target>
-  <Target Name="Restore">
+  <Target Name="Restore" AfterTargets="GitInfo">
     <Message Text="Restoring!" Importance="High" />
     <Copy 
           SourceFiles="@(Content)"
           DestinationFiles="@(Content->'%(RestorePath)')" />
   </Target>
   <Target Name="Clean">
-    <Message Text="Cleaning!" Importance="High" />
+    <Message Text="Deinitializing the repo..." Importance="High" />
     <Delete Files="@(Content->'%(RestorePath)')" />
   </Target>
 </Project>
