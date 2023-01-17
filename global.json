@@ -12,7 +12,7 @@
     "JustInTimeVersioningSdk": "0.0.3",
     "NuGetPush": "0.0.4",
     "MetapackageSdk": "0.0.2",
-    "JustinWritesCodeSdk": "0.0.8",
-    "JwcRepoInitSdk": "0.0.4"
+    "JustinWritesCodeSdk": "0.0.9",
+    "JwcRepoInitSdk": "0.0.5"
   }
 }
