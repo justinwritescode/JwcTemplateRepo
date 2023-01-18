@@ -10,4 +10,4 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="JwcRepoInitSdk/0.0.5" />
+<Project Sdk="JwcRepoInitSdk" />
