@@ -12,7 +12,12 @@
     "JustInTimeVersioningSdk": "0.0.3",
     "NuGetPush": "0.0.4",
     "MetapackageSdk": "0.0.2",
+<<<<<<< HEAD
     "JustinWritesCodeSdk": "0.0.11",
     "JwcRepoInitSdk": "0.0.7"
+=======
+    "JustinWritesCodeSdk": "0.0.10",
+    "JwcRepoInitSdk": "0.0.6"
+>>>>>>> f437b54 ("initial" commit -_-)
   }
 }
