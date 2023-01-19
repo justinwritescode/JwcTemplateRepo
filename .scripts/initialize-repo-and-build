@@ -6,4 +6,6 @@ dotnet file add https://github.com/justinwritescode/JwcRepoInitSdk/blob/main/glo
 dotnet file add https://github.com/justinwritescode/JwcRepoInitSdk/blob/main/NuGet.config;
 dotnet restore Init.proj;
 
-dotnet build ./*.slnproj;
+dotnet nuget 
+
+dotnet build ./*.slnproj -c:Release;

@@ -17,31 +17,31 @@
                     Folder="./" IsRestorable="false" />
     </ItemDefinitionGroup>
    <ItemGroup Condition="'$(MSBuildProjectName)' == 'JwcRepoInitSdk'">
-        <Content Include="$(MSBuildThisFileDirectory)../.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" />
-        <Content Include="$(MSBuildThisFileDirectory)../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
-        <Content Include="$(MSBuildThisFileDirectory)../.scripts/**/*" Folder=".scripts/" />
-        <Content Include="$(MSBuildThisFileDirectory)../NuGet.config" />
-        <Content Include="$(MSBuildThisFileDirectory)../.gitignore" />
-        <Content Include="$(MSBuildThisFileDirectory)../LICENSE.md" />
-        <Content Include="$(MSBuildThisFileDirectory)../global.json" />
+        <Content Include="$(MSBuildThisFileDirectory)../.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../.scripts/**/*" Folder=".scripts/" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../NuGet.config" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../.gitignore" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../LICENSE.md" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../global.json" Visible="false" />
         <Content Update="@(Content)" 
                 PackagePath="ContentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
-                RestorePath="$(MSBuildProjectDirectory)/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
-        <Content Include="$(MSBuildThisFileDirectory)../_Directory.Build.props" PackagePath="ContentFiles/Directory.Build.props" />
-        <Content Include="$(MSBuildThisFileDirectory)../_Directory.Build.targets" PackagePath="ContentFiles/Directory.Build.targets" />
+                RestorePath="$(MSBuildProjectDirectory)/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../_Directory.Build.props" PackagePath="ContentFiles/Directory.Build.props" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../_Directory.Build.targets" PackagePath="ContentFiles/Directory.Build.targets" Visible="false" />
     </ItemGroup>
    <ItemGroup Condition="'$(MSBuildProjectName)' != 'JwcRepoInitSdk'">
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.scripts/**/*" Folder=".scripts/" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/Directory.Build.props" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/Directory.Build.targets" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/NuGet.config" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.gitignore" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/LICENSE.md" />
-        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/global.json" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.scripts/**/*" Folder=".scripts/" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/Directory.Build.props" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/Directory.Build.targets" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/NuGet.config" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/.gitignore" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/LICENSE.md" Visible="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../ContentFiles/global.json" Visible="false" />
         <Content Update="@(Content)" 
                 PackagePath="ContentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
-                RestorePath="$(MSBuildProjectDirectory)/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
+                RestorePath="$(MSBuildProjectDirectory)/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" Visible="false" />
     </ItemGroup>
 </Project>
