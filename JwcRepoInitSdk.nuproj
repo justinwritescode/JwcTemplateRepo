@@ -44,11 +44,11 @@ Then run the following command and voila! The files will be restored!
 
 </Description>
     </PropertyGroup>
-    <Import Project="$(MSBuildThisFileDirectory)./Sdk/Packager.SharedFiles.items" />
+    <Import Project="$(MSBuildThisFileDirectory)SharedFiles.items" />
     <ItemGroup>
       <Content Include="$(MSBuildThisFileDirectory)./Sdk/Sdk.props" PackagePath="Sdk/Sdk.props" />
       <Content Include="$(MSBuildThisFileDirectory)./Sdk/Sdk.targets" PackagePath="Sdk/Sdk.targets" />
-      <Content Include="$(MSBuildThisFileDirectory)./Sdk/Packager.SharedFiles.items" PackagePath="Sdk/Packager.SharedFiles.items" />
+      <!-- <Content Include="$(MSBuildThisFileDirectory)./Sdk/Packager.SharedFiles.items" PackagePath="Sdk/Packager.SharedFiles.items" /> -->
     </ItemGroup>
 
     <ItemGroup>

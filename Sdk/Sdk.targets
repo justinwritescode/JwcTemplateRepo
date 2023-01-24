@@ -1,5 +1,4 @@
 <Project>
-  <Import Project="$(MSBuildThisFileDirectory)Packager.SharedFiles.items" />
   <Target Name="Build">
     <Message Text="Building!" Importance="High" />
   </Target>

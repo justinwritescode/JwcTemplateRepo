@@ -11,5 +11,18 @@
 -->
 
 <Project>
-
+   <ItemGroup Condition="'$(MSBuildProjectName)' != 'JwcRepoInitSdk'">
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.scripts/**/*.*" Folder=".scripts/" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/Directory.Build.props" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/Directory.Build.targets" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/NuGet.config" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.gitignore" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/LICENSE.md" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/global.json" />
+      <RestoreFile Update="@(RestoreFile)" 
+              PackagePath="contentFiles/%(RestoreFile.Folder)%(RestoreFile.RecursiveDir)%(RestoreFile.Filename)%(RestoreFile.Extension)" 
+              RestorePath="$(MSBuildProjectDirectory)/%(RestoreFile.Folder)%(RestoreFile.RecursiveDir)%(RestoreFile.Filename)%(RestoreFile.Extension)" Visible="false" Pack="false" />
+    </ItemGroup>
 </Project>

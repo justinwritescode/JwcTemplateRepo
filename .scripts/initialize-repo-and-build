@@ -8,4 +8,5 @@ dotnet restore Init.proj;
 
 dotnet nuget 
 
+dotnet restore ./*.slnproj -c:Release;
 dotnet build ./*.slnproj -c:Release;
