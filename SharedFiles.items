@@ -21,10 +21,10 @@
 
   <ItemGroup Condition="'$(MSBuildProjectName)' == 'JwcRepoInitSdk'">
     <Content Include="$(MSBuildThisFileDirectory).config/dotnet-tools.json" Folder=".config/" PackagePath="contentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)"  />
+    <Content Include="$(MSBuildThisFileDirectory).nuget/NuGet.config" Folder=".nuget/" PackagePath="contentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
     <Content Include="$(MSBuildThisFileDirectory).github/**/*.*" IsRestorable="true" Folder=".github/" PackagePath="contentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
     <Content Include="$(MSBuildThisFileDirectory).scripts/**/*.*" Folder=".scripts/" PackagePath="contentFiles/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
     <Content Include="$(MSBuildThisFileDirectory)Init.proj" PackagePath="contentFiles/%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
-    <Content Include="$(MSBuildThisFileDirectory)NuGet.config" PackagePath="contentFiles/%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
     <Content Include="$(MSBuildThisFileDirectory).gitignore" PackagePath="contentFiles/%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
     <Content Include="$(MSBuildThisFileDirectory)LICENSE.md" PackagePath="contentFiles/%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
     <Content Include="$(MSBuildThisFileDirectory)global.json" PackagePath="contentFiles/%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
