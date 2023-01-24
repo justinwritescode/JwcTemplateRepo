@@ -13,6 +13,7 @@
 <Project>
    <ItemGroup Condition="'$(MSBuildProjectName)' != 'JwcRepoInitSdk'">
       <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.config/dotnet-tools.json" Exclude=".DS_Store" IsRestorable="false" Folder=".config/" />
+      <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.nuget/NuGet.config" Folder=".nuget/" />
       <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
       <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/.scripts/**/*.*" Folder=".scripts/" />
       <RestoreFile Include="$(MSBuildThisFileDirectory)../contentFiles/Directory.Build.props" />
