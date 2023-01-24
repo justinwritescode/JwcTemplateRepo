@@ -1,0 +1,5 @@
+[file "Invoke-Build.ps1"]
+	url = https://github.com/justinwritescode/InvokeBuild/blob/main/Invoke-Build.ps1
+	sha = 721eb6ce23ced5ac4e7d9c31713ea2f76baab2d6
+	etag = 390b6a4557e82967f5b8f65779ffa2a80d3b4faaf8d2a21746c25088fd4a01f8
+	weak
